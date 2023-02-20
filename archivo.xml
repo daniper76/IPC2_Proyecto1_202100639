@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<datosMarte>
+    <listaOrganismos>
+        <organismo>
+            <codigo>1.0</codigo>
+            <nombre>Amarrillo</nombre>
+        </organismo>
+    </listaOrganismos>
+    <listadoMuestras>
+        <muestra>
+            <codigo>1.0</codigo>
+            <descripcion>Primero Muestra</descripcion>
+            <filas>20</filas>
+            <columnas>22</columnas>
+            <listadoCeldasVivas>
+                <celdaViva>
+                    <fila>6</fila>
+                    <columna>5</columna>
+                    <codigoOrganismo>1.1<codigoOrganismo>
+                </celdaViva>
+            </listadoCeldasVivas>
+        </muestra>
+    </listadoMuestras>
+</datosMarte>
