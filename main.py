@@ -14,8 +14,11 @@ while bandera:
     print(opcion)
 
     if opcion=='1':
-        archivo=input(Fore.BLUE+'Ingrese la direccion del archivo xml del archivo xml')
+        archivo=input(Fore.BLUE+'Ingrese la direccion del archivo xml del archivo xml: ')
+        largo_tablero=input(Fore.Blue+'Ingrese el tamaño horizontal del tablero: ')
+        ancho_tablero=input(Fore.Blue+'Ingrese el tamaño vertical del tablero: ')
         lista_organismos=Cola()
+        lista_organismos.DeterminarTamanoTablero(largo_tablero,ancho_tablero)
         LecturaXML(lista_organismos,archivo)     
     
     elif opcion=="5":
