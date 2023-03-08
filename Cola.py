@@ -29,3 +29,7 @@ class Cola:
             if Auxiliar.ObtenerCodigo()==codigo_organismo:
                 Auxiliar.ObtenerPosicionOrganismos().Insertar(fila,columna,codigo_organismo)
             Auxiliar=Auxiliar.Siguiente
+
+    def DeterminarTamanoTablero(self,tamano_horizontal,tamano_vertical):
+        self.tamano_horizontal = tamano_horizontal
+        self.tamano_vertical = tamano_vertical
