@@ -1,6 +1,8 @@
 from colorama import Fore, Back, Style
 from Cola import Cola
 from LecturaArchivo import LecturaXML
+from ColaMuestras import ColaMuestras
+from Graficador import Graficar
 
 bandera=True
 while bandera:
@@ -15,12 +17,15 @@ while bandera:
 
     if opcion=='1':
         archivo=input(Fore.BLUE+'Ingrese la direccion del archivo xml del archivo xml: ')
-        largo_tablero=input(Fore.Blue+'Ingrese el tamaño horizontal del tablero: ')
-        ancho_tablero=input(Fore.Blue+'Ingrese el tamaño vertical del tablero: ')
         lista_organismos=Cola()
-        lista_organismos.DeterminarTamanoTablero(largo_tablero,ancho_tablero)
         LecturaXML(lista_organismos,archivo)     
-    
+    elif opcion=='2':
+        largo_tablero=input(Fore.BLUE+'Ingrese el tamaño horizontal del tablero: ')
+        ancho_tablero=input(Fore.BLUE+'Ingrese el tamaño vertical del tablero: ')
+        Graficar(lista_organismos.CrearListaInicial(),int(largo_tablero),int(ancho_tablero))
     elif opcion=="5":
         bandera=False
+    
+    else:
+        print("opcion invalida :/")
 
