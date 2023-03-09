@@ -1,4 +1,5 @@
 from NodoOrg import Nodo
+from ColaMuestras import ColaMuestras
 
 class Cola:
 
@@ -30,6 +31,12 @@ class Cola:
                 Auxiliar.ObtenerPosicionOrganismos().Insertar(fila,columna,codigo_organismo)
             Auxiliar=Auxiliar.Siguiente
 
-    def DeterminarTamanoTablero(self,tamano_horizontal,tamano_vertical):
-        self.tamano_horizontal = tamano_horizontal
-        self.tamano_vertical = tamano_vertical
+    def CrearListaInicial(self):
+        Auxiliar=self.Cabeza
+        ListaInicial=ColaMuestras()
+        while Auxiliar != None:
+            ListaInicial.LlenarFase2(Auxiliar.ObtenerPosicionOrganismos().LlenarFase1(Auxiliar.ObtenerColor()))
+            Auxiliar=Auxiliar.Siguiente
+        return ListaInicial
+
+
