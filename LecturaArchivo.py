@@ -45,13 +45,13 @@ def LecturaXML(lista_organismo,archivo):
 
                         fila_organismo = int(fila[0].firstChild.nodeValue)
                         columna_organismo = int(columna[0].firstChild.nodeValue)
-                        codigoOrganismo_organismo = int(codigoOrganismo[0].firstChild.nodeValue)
+                        codigoOrganismo_organismo = str(codigoOrganismo[0].firstChild.nodeValue)
 
                         print("Fila:"+str(fila_organismo))
                         print("Columan:"+str(columna_organismo))
                         print("Codigo del Organismo:"+str(codigoOrganismo_organismo))
 
-                        lista_organismo.IngresarPosicionesOrganismos(int(fila_organismo),int(columna_organismo),int(codigoOrganismo_organismo))
+                        lista_organismo.IngresarPosicionesOrganismos(int(fila_organismo),int(columna_organismo),str(codigoOrganismo_organismo))
 
 
 
